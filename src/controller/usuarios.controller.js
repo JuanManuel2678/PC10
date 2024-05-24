@@ -67,18 +67,7 @@ export const update = async (req, res) => {
   }
 }
 
-export const subir = async (req, res) => {
-  try {
-    const { user } = req.body
-
-    if (nuevoNombreArchivo === null) {
-      return res.status(500).json({ message: 'no se puede subbir la imagen ' })
-    }
-
-    // const [resultado] = await pool.execute('INSERT INTO usuarios(usuario_id, picture) VALUE (?,?)', [nuevoNombreArchivo, user])
-
-    // if (resultado.affectedRows === 1) {
-
-    // }
-  } catch {}
+export const subir = (req, res) => {
+  console.log(req.file)
+  res.json({ mesaage: 'Imagen cargado con exito' })
 }
